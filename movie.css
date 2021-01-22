@@ -1,0 +1,21 @@
+
+th,tr
+{
+   text-align:justify;
+   height:50px;
+   vertical-align:justify;
+   background-color:rgb(233, 240, 233);
+   color:rgb(12, 11, 11);
+}
+#header{
+   height: 100px;
+   width: 100%;
+   background-color: rgba(30, 128, 255, 0.959);
+   text-align:right;
+   vertical-align:justify;
+}
+#header_h{
+   text-align:left;
+   vertical-align:justify;
+}
+
