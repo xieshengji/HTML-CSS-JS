@@ -30,19 +30,41 @@
                 </tr>
             </div>
 
-            <tr v-for="movie in joke">
+            <tr >
                 <div >
-                    <th><img height="300" width="300" :src="movie.m_photo"/></th>
-                    <th>{{movie.m_name}}</th>
-                    <th >{{movie.m_introduce}}</th>
-                    <th>5.7</th>
-                    <th><button style='background-color:rgba(30, 128, 255, 0.959);color:white'>详细</button>
-                        <button style='background-color:rgba(30, 128, 255, 0.959);color:white'>修改</button>
-                        <button style='background-color:rgba(255, 30, 105, 0.959);color:white'>删除</button></th>
+                    <th :contenteditable="change1"><img  v-show="del1" height="300" width="300" :src="joke1.m_photo"/></th>
+                    <th :contenteditable="change1" v-show="del1">{{joke1.m_name}}</th>
+                    <th id="tst1" :contenteditable="change1" v-show="del1">{{joke1.m_introduce}}</th>
+                    <th :contenteditable="change1" v-show="del1">{{joke1.m_score}}</th>
+                    <th><button style='background-color:rgba(30, 128, 255, 0.959);color:white' @click="jump1()">详细</button>
+                        <button style='background-color:rgba(30, 128, 255, 0.959);color:white' @click="changeit1(joke1.m_id-1)">修改</button>
+                        <button style='background-color:rgba(255, 30, 105, 0.959);color:white' @click="delete1()">删除</button></th>
+                </div>
+            </tr>
+            <tr >
+                <div >
+                    <th :contenteditable="change2"><img  v-show="del1" height="300" width="300" :src="joke2.m_photo"/></th>
+                    <th :contenteditable="change2" v-show="del1">{{joke2.m_name}}</th>
+                    <th id="tst2" :contenteditable="change2" v-show="del1">{{joke2.m_introduce}}</th>
+                    <th :contenteditable="change2" v-show="del1">{{joke2.m_score}}</th>
+                    <th><button style='background-color:rgba(30, 128, 255, 0.959);color:white' @click="jump2()">详细</button>
+                        <button style='background-color:rgba(30, 128, 255, 0.959);color:white' @click="changeit2(joke2.m_id-1)">修改</button>
+                        <button style='background-color:rgba(255, 30, 105, 0.959);color:white' @click="delete2()">删除</button></th>
+                </div>
+            </tr>
+            <tr >
+                <div >
+                    <th :contenteditable="change3"><img  v-show="del1" height="300" width="300" :src="joke3.m_photo"/></th>
+                    <th :contenteditable="change3" v-show="del1">{{joke3.m_name}}</th>
+                    <th id="tst3" :contenteditable="change3" v-show="del1">{{joke3.m_introduce}}</th>
+                    <th :contenteditable="change3" v-show="del1">{{joke3.m_score}}</th>
+                    <th><button style='background-color:rgba(30, 128, 255, 0.959);color:white' @click="jump3()">详细</button>
+                        <button style='background-color:rgba(30, 128, 255, 0.959);color:white' @click="changeit3(joke3.m_id-1)">修改</button>
+                        <button style='background-color:rgba(255, 30, 105, 0.959);color:white' @click="delete3()">删除</button></th>
                 </div>
             </tr>
         </table>
-            <div class="clear"></div>
+     </div>    
    <script language="JavaScript" src="./movie.js"></script> 
 </body>  
 </html>

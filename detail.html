@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>影片详情</title>
+         <link rel="stylesheet" href="./detail.css" />
+    </head>
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <!--页面上部分-->
+<div  id="header">
+<h1 class="title">{{movie_name}}</h1>
+</div> 
+<!--页面中间部分-->
+ <div id="content">
+     <table>
+         <tr>
+             <th>
+              <img height="600" width="500" :src="movie_picture" />
+             </th>
+             <th>
+               <h2>导演</h2>
+               <p>{{movie_director}}</p>
+               <h2>编剧</h2>
+               <p>{{movie_wirter}}</p>
+               <h2>主演</h2>
+               <p>{{movie_actor}}</p>
+               <h2>简介</h2>
+               <p>{{movie_introduce}}</p>
+               <h2>上映日期</h2>
+               <p>{{movie_data}}</p>
+             </th>
+         </tr>
+     </table>
+ </div>
+
+ <!--页面下部分-->
+ <div id="comment">
+<div id="comment1">
+    <h1>评论区(在评分输完按回车提交)</h1>  
+    <div class="输入框1">
+    <input v-model="commentvalue"  autofocus="autofocus" autocomplete="off" placeholder="请输入你的评论">
+    </div>
+    <div class="列表区1">
+     <ul class="todo-list1">
+         <li class="todo1" v-for="(item,index) in list">
+             <div class="view1">
+                 <!-- <span class="index1">{{index+1}}</span> -->
+                <label>{{item}}</label>
+             </div>
+         </li>
+     </ul>
+    </div>
+</div>
+<div id="comment2">
+    <h1>评分区(范围为0-10)</h1>  
+    <div class="输入框2">
+    <input v-model="commentvalue2" @keyup.enter="inputcomment" autofocus="autofocus" autocomplete="off" placeholder="请输入你的评论">
+    </div>
+    <div class="列表区2">
+     <ul class="todo-list2">
+         <li class="todo2" v-for="(item,index) in list2">
+             <div class="view2">
+                 <!-- <span class="index2">{{index+1}}</span> -->
+                <label>{{item}}</label>
+             </div>
+         </li>
+     </ul>
+    </div>
+    
+ </div>
+     <!--平均分显示-->
+     <div id="average">
+        <h1>平均分为{{average1}}</h1>
+    </div>
+    <script language="JavaScript" src="C:\Users\Administrator\Desktop\work\detail.js"></script> 
+</div>
+
+<video autoplay loop muted>
+    <source src="C:\Users\Administrator\Desktop\work\back3.mp4" />
+  </video>
+  
+</body>
+</html>

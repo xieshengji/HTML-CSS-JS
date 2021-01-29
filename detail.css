@@ -1,0 +1,78 @@
+video{  
+    position: fixed;  
+    right: 0px;  
+    bottom: 0px;  
+    min-width: 100%;  
+    min-height: 100%;  
+    height: auto;  
+    width: auto;  
+    z-index:-999;
+}
+body
+{
+    color: rgb(250, 250, 250);
+    background-color:transparent;
+}
+button
+{
+    color: rgb(253, 251, 251);
+}
+#header
+{
+    height: 100px;
+    width: 100%;
+    background-color:transparent;
+    text-decoration-color: black;
+   
+}
+#average
+{
+    height: 300px;
+    width: 33%;
+    float: left;
+    background-color:transparent;
+    text-decoration-color: black;
+}
+.title
+{
+  vertical-align: bottom;
+    text-align: center;
+}
+#content
+{
+    height: 600px;
+    width: 100%;
+    background-color:transparent;
+    vertical-align:center;
+}
+#comment
+{
+    height: 300px;
+    width: 100%;
+    background-color:transparent;
+    
+    vertical-align:center;
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+}
+#comment1
+{
+    
+    float: left;
+    width:33%;
+    height:300px;
+   
+}
+#comment2
+{
+    height: 300px;
+    float: left;
+    width:33%;
+    
+    
+}
+ul
+{
+    list-style-type:circle;
+}
